@@ -1,7 +1,7 @@
-Fresh Grade Tech Test
-By Deryk Schneider
+# Fresh Grade Tech Test
+#### By Deryk Schneider
 
-Instructions:
+#### Instructions:
 Choose your favorite web framework (Undertow, NodeJS etc) and implement a Rest API for the following proposed application and deploy it to a cloud provider (Google, Azure or AWS) using their free hosting tier (You will need a credit card).
 Please pay close attention to the route to create a student.
 The implementation should parse the name as entered into a separate firstname and lastname. Simple example name strings, "last, first" or "first last".
@@ -15,62 +15,62 @@ This project took me approximately 8 hours over 3 days to teach myself Express a
 Given another 8-10 hours I could implement 100% plus I could probably squeeze in value add features like edit student, activity usage metrics and api security.
 But I said Wednesday delivery so I hope you can see the vision I had for this project.
 
-Directions:
-insall Node and Express.
-run `node server/server.js`
-open client/index.html in browser
+#### Directions:
+- insall Node and Express.
+- run `node server/server.js`
+- open client/index.html in browser
 
-Project Structure:
-README.md
-Design.pdf
-client
-	app.js
-	index.html
-	style.css
-server
-	server.js
-	controller.js
-	routes.js
-	images
-		1.jpg
-		0.jpg
-		default.jpg
-node_modules
-	...
+#### Project Structure:
+- README.md
+- Design.pdf
+- client
+  - app.js
+  - index.html
+  - style.css
+- server
+  - server.js
+  - controller.js
+  - routes.js
+  - images
+    - 1.jpg
+    - 0.jpg
+    - default.jpg
+- node_modules
+  - ...
 
-Dependancies:
-Node
-Express
-Jquery
-Angular
+#### Dependancies:
+- Node
+- Express
+- Jquery
+- Angular
 
-Constraints:
-LastName should be 1 word (no spaces, hyphenated last names ok)
-add student name assumes 1 word before a comma is last name OR last word is last name.
-all non last name words are given names or first names.
-profile pic is optional
+#### Constraints:
+- LastName should be 1 word (no spaces, hyphenated last names ok)
+- add student name assumes 1 word before a comma is last name OR last word is last name.
+- all non last name words are given names or first names.
+- profile pic is optional
 
-Basic html structure of teacher app design:
-homepage:
-	'Student Management App',
-	'View Student List', 'Add Student'
-addStudent:
-	'< Menu' (back to homepage), 'Add Student', 'Save' (to REST api, log usage report),
-	'Get Random Student' (auto fill fields from https://randomuser.me/),
-	'Add Profile Pic',
-	'Enter First And Last Name' (multi-format)
-studentList:
-	'< Menu' (back to homepage), 'Student List', 'Add Student'
-	list of students
-		'firstName', 'lastName', 'Delete' (confirm), 'Open'
-studentDetail:
-	'< Menu', 'Student Info', 'Delete' (confirm)
-	picture
-	'FirstName'
-	'LastName'
+#### Basic html structure of teacher app design:
+- homepage:
+  - 'Student Management App',
+  - 'View Student List', 'Add Student'
+- addStudent:
+  - '< Menu' (back to homepage), 'Add Student', 'Save' (to REST api, log usage report),
+  - 'Get Random Student' (auto fill fields from https://randomuser.me/),
+  - 'Add Profile Pic',
+  - 'Enter First And Last Name' (multi-format)
+- studentList:
+  - '< Menu' (back to homepage), 'Student List', 'Add Student'
+  - list of students
+    - 'firstName', 'lastName', 'Delete' (confirm), 'Open'
+- studentDetail:
+  - '< Menu', 'Student Info', 'Delete' (confirm)
+  - picture
+  - 'FirstName'
+  - 'LastName'
 
-For this project I used references online at:
-http://stackoverflow.com/
-https://www.w3schools.com
-https://www.tutorialspoint.com/nodejs/nodejs_express_framework.htm
+#### For this project I used references online at:
+- [Trusty Stack Overflow](http://stackoverflow.com/)
+- [W3 Schools for all things web standards](https://www.w3schools.com)
+- [Node Express tutorial](https://www.tutorialspoint.com/nodejs/nodejs_express_framework.htm)
 
