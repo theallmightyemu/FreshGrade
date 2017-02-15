@@ -1,0 +1,122 @@
+/*
+@title: Fresh Grade Tech Test
+@date: 2017-02-10
+@author: Deryk Schneider
+@contact: deryk.schneider@gmail.com
+@notes: source on git, summary in README.md
+
+If given more time all this css would be compiled with a dynamic variable based structure like SASS.
+Also each interactive element would have a nice hover or clicked treatment/animation.
+Also font and coloring would have be optimized for readability across mobile/tablet/web.
+*/
+
+body {
+	background-color: #ddd;
+}
+.jumbotron {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	margin-bottom: 0;
+}
+section {
+	position: absolute;
+	top     : 0;
+	left    : 0;
+	width   : 100%;
+	height  : 100%;
+	display : none;
+}
+section.homepage {
+	display: block;
+}
+a {
+	cursor: pointer;
+}
+h3 a {
+	margin: 0 1rem;
+}
+.row {
+	background-color: #fff;
+	font-size       : 150%;
+	border          : solid #eee 1px;
+	padding-top     : 0.5rem;
+	padding-bottom  : 0.5rem;
+}
+icon {
+	font-size    : 150%;
+	margin-right : 2rem;
+	padding-left : 0.9rem;
+	padding-right: 0.9rem;
+	border       : solid #337ab7 1px;
+	border-radius: 4rem;
+}
+.btn icon {
+	padding-left : 0.6rem;
+	padding-right: 0.6rem;
+}
+icon.i {
+	padding-left : 1.5rem;
+	padding-right: 1.5rem;
+}
+icon.q {
+	padding-left : 1rem;
+	padding-right: 1rem;
+}
+input {
+	margin-left: 1rem;
+	font-size  : 80%;
+	min-width  : 220px;
+}
+.profilePic {
+	position        : relative;
+	padding         : 3rem 0;
+	background-color: #ddd;
+}
+.frame {
+	position           : relative;
+	background-color   : #fff;
+	background-position: 50% 50%;
+	background-repeat  : none;
+	border-radius      : 50rem;
+	margin             : 0 auto;
+	display            : block;
+	content            : ' ';
+	width              : 20rem;
+	height             : 20rem;
+}
+.student {
+	position: relative;
+}
+.student:after {
+	content: '>';
+	position: absolute;
+	font-size: 150%;
+	font-weight: bold;
+	top: 0;
+	right: 3rem;
+}
+.row {
+	margin-left: 0;
+	margin-right: 0;
+	padding: 1rem;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    border: solid #337ab7 1px;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}

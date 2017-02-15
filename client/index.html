@@ -1,0 +1,89 @@
+<!--
+@title: Fresh Grade Tech Test
+@date: 2017-02-10
+@author: Deryk Schneider
+@contact: deryk.schneider@gmail.com
+@notes: source on git, summary in README.md
+-->
+<html>
+<head>
+	<title>Fresh Grade Tech Test</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-app="App">
+<div ng-controller="AppCtrl">
+<!--
+Because there are only 4 pages I am duplicating the html skeleton to switch views.
+Given more time I would have angular templates to manage the html.
+-->
+	<section class="homepage">
+		<div class="jumbotron text-center">
+			<h1>Student Management App</h1>
+		</div>
+		<container>
+			<a ng-click="open('studentList')"><div class="row text-center"><icon class="i">i</icon>View Student List</div></a>
+			<a ng-click="open('studentAdd')"><div class="row text-center"><icon>+</icon>Add Student</div></a>
+		</container>
+	</section>
+	<section class="studentAdd">
+		<div class="jumbotron text-center">
+			<h1>Add Student</h1>
+			<h3>
+				<a ng-click="open('homepage')">< Menu</a>
+				<a ng-click="save()">Save</a>
+			</h3>
+		</div>
+		<container>
+			<a ng-click="random()" ><div class="row text-center"><icon class="q">?</icon>Get Random Student</div></a>
+			<div class="row text-center profilePic">
+				<div class="frame"></div>
+			</div>
+			<div class="row text-center">
+				<span class="btn btn-default btn-file">
+					Add Profile Pic (coming soon) <input type="file" name="pic" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+				</span>
+			</div>
+			<div class="row text-center">Name:<input type="text" id="name" placeholder="Enter First And Last Name"></div>
+		</container>
+	</section>
+	<section class="studentList">
+		<div class="jumbotron text-center">
+			<h1>List Students</h1>
+			<h3>
+				<a ng-click="open('homepage')">< Menu</a>
+				<a ng-click="open('studentAdd')">Add Student</a>
+			</h3>
+		</div>
+		<container>
+			<a ng-click="open('studentDetail', x.id)" ng-repeat="x in students">
+				<div class="row student" >
+					<span class="lastName">{{x.lastName}}</span>,&nbsp;
+					<span class="firstName">{{x.firstName}}</span>
+				</div>
+			</a>
+		</container>
+	</section>
+	<section class="studentDetail">
+		<div class="jumbotron text-center">
+			<h1>Student Info</h1>
+			<h3>
+				<a ng-click="open('homepage')">< Menu</a>
+				<a ng-click="delete(student.id)">Delete</a>
+			</h3>
+		</div>
+		<container>
+			<div class="row text-center profilePic">
+				<div class="frame" style="background-image: url({{student.profilePic}})"></div>
+			</div>
+			<div class="row text-center">{{student.lastName}}</div>
+			<div class="row text-center">{{student.firstName}}</div>
+		</container>
+	</section>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</div>
+</body>
+</html
